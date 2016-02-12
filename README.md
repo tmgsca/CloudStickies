@@ -2,6 +2,6 @@
 
 # License
 
-```TMSmartAlertView``` is licensed under the [MIT License](http://opensource.org/licenses/MIT). See ```LICENSE``` for details.
+```Cloud Stickies``` is licensed under the [MIT License](http://opensource.org/licenses/MIT). See ```LICENSE``` for details.
 
-### Copyright © 2014 Thiago Magalhães.
+### Copyright © 2016 Thiago Magalhães.
