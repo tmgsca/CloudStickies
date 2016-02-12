@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF86983C1C6901EB009C1EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86983B1C6901EB009C1EB1 /* AppDelegate.swift */; };
+		AF86983E1C6901EB009C1EB1 /* StickyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86983D1C6901EB009C1EB1 /* StickyViewController.swift */; };
+		AF8698401C6901EB009C1EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF86983F1C6901EB009C1EB1 /* Assets.xcassets */; };
+		AF8698431C6901EB009C1EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8698411C6901EB009C1EB1 /* Main.storyboard */; };
+		AFD1913A1C6D522D00BC5E27 /* StickyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD191391C6D522D00BC5E27 /* StickyWindow.swift */; };
+		AFD1913C1C6D6A4100BC5E27 /* StickyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */; };
+		AFE715FB1C6A8F810016D445 /* StickyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF8698381C6901EB009C1EB1 /* CloudStickies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudStickies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF86983B1C6901EB009C1EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF86983D1C6901EB009C1EB1 /* StickyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyViewController.swift; sourceTree = "<group>"; };
+		AF86983F1C6901EB009C1EB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF8698421C6901EB009C1EB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF8698441C6901EB009C1EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD191391C6D522D00BC5E27 /* StickyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindow.swift; sourceTree = "<group>"; };
+		AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyTextView.swift; sourceTree = "<group>"; };
+		AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF8698351C6901EB009C1EB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF86982F1C6901EB009C1EB1 = {
+			isa = PBXGroup;
+			children = (
+				AF86983A1C6901EB009C1EB1 /* CloudStickies */,
+				AF8698391C6901EB009C1EB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF8698391C6901EB009C1EB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF8698381C6901EB009C1EB1 /* CloudStickies.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF86983A1C6901EB009C1EB1 /* CloudStickies */ = {
+			isa = PBXGroup;
+			children = (
+				AF86983B1C6901EB009C1EB1 /* AppDelegate.swift */,
+				AF86983D1C6901EB009C1EB1 /* StickyViewController.swift */,
+				AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */,
+				AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */,
+				AFD191391C6D522D00BC5E27 /* StickyWindow.swift */,
+				AF8698411C6901EB009C1EB1 /* Main.storyboard */,
+				AF8698441C6901EB009C1EB1 /* Info.plist */,
+				AF86983F1C6901EB009C1EB1 /* Assets.xcassets */,
+			);
+			path = CloudStickies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF8698371C6901EB009C1EB1 /* CloudStickies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8698471C6901EB009C1EB1 /* Build configuration list for PBXNativeTarget "CloudStickies" */;
+			buildPhases = (
+				AF8698341C6901EB009C1EB1 /* Sources */,
+				AF8698351C6901EB009C1EB1 /* Frameworks */,
+				AF8698361C6901EB009C1EB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudStickies;
+			productName = SmartStickies;
+			productReference = AF8698381C6901EB009C1EB1 /* CloudStickies.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF8698301C6901EB009C1EB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Thiago;
+				TargetAttributes = {
+					AF8698371C6901EB009C1EB1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = AF8698331C6901EB009C1EB1 /* Build configuration list for PBXProject "CloudStickies" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF86982F1C6901EB009C1EB1;
+			productRefGroup = AF8698391C6901EB009C1EB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF8698371C6901EB009C1EB1 /* CloudStickies */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF8698361C6901EB009C1EB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8698401C6901EB009C1EB1 /* Assets.xcassets in Resources */,
+				AF8698431C6901EB009C1EB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF8698341C6901EB009C1EB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD1913A1C6D522D00BC5E27 /* StickyWindow.swift in Sources */,
+				AF86983E1C6901EB009C1EB1 /* StickyViewController.swift in Sources */,
+				AFE715FB1C6A8F810016D445 /* StickyWindowController.swift in Sources */,
+				AFD1913C1C6D6A4100BC5E27 /* StickyTextView.swift in Sources */,
+				AF86983C1C6901EB009C1EB1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF8698411C6901EB009C1EB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8698421C6901EB009C1EB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF8698451C6901EB009C1EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF8698461C6901EB009C1EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AF8698481C6901EB009C1EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CloudStickies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.emisvx.cloudstickies;
+				PRODUCT_NAME = CloudStickies;
+			};
+			name = Debug;
+		};
+		AF8698491C6901EB009C1EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CloudStickies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.emisvx.cloudstickies;
+				PRODUCT_NAME = CloudStickies;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF8698331C6901EB009C1EB1 /* Build configuration list for PBXProject "CloudStickies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8698451C6901EB009C1EB1 /* Debug */,
+				AF8698461C6901EB009C1EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8698471C6901EB009C1EB1 /* Build configuration list for PBXNativeTarget "CloudStickies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8698481C6901EB009C1EB1 /* Debug */,
+				AF8698491C6901EB009C1EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF8698301C6901EB009C1EB1 /* Project object */;
+}
