@@ -667,7 +667,7 @@
             <objects>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="XfG-lQ-9wD" customClass="StickyViewController" customModule="CloudStickies" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="StickyView" customModule="CloudStickies" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="150"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>

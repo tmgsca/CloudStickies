@@ -10,14 +10,6 @@ import Cocoa
 
 class StickyWindow: NSWindow {
 
-    var initialPosition = NSPoint()
-    
-    var stickyNoteID: Int?
-
     override var canBecomeKeyWindow: Bool { get { return true } }
     override var canBecomeMainWindow: Bool { get { return true } }
-    
-    override func awakeFromNib() {
-        
-    }
 }
