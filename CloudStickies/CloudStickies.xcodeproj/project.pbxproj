@@ -14,10 +14,8 @@
 		AFD1913A1C6D522D00BC5E27 /* StickyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD191391C6D522D00BC5E27 /* StickyWindow.swift */; };
 		AFD1913C1C6D6A4100BC5E27 /* StickyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */; };
 		AFD3BD2E1C6E689500846C9E /* StickyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3BD2D1C6E689500846C9E /* StickyNote.swift */; };
-		AFD3BD2F1C6E68EE00846C9E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD291C6E684C00846C9E /* Realm.framework */; };
-		AFD3BD301C6E68EE00846C9E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD291C6E684C00846C9E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AFD3BD311C6E68EE00846C9E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */; };
-		AFD3BD321C6E68EE00846C9E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFD3BD3A1C6E89D800846C9E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD381C6E89D800846C9E /* Realm.framework */; };
+		AFD3BD3B1C6E89D800846C9E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD391C6E89D800846C9E /* RealmSwift.framework */; };
 		AFE715FB1C6A8F810016D445 /* StickyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFD3BD321C6E68EE00846C9E /* RealmSwift.framework in Embed Frameworks */,
-				AFD3BD301C6E68EE00846C9E /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,9 +41,9 @@
 		AF8698441C6901EB009C1EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD191391C6D522D00BC5E27 /* StickyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindow.swift; sourceTree = "<group>"; };
 		AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyTextView.swift; sourceTree = "<group>"; };
-		AFD3BD291C6E684C00846C9E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		AFD3BD2D1C6E689500846C9E /* StickyNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyNote.swift; sourceTree = "<group>"; };
+		AFD3BD381C6E89D800846C9E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Realm/Realm.framework; sourceTree = "<group>"; };
+		AFD3BD391C6E89D800846C9E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Realm/RealmSwift.framework; sourceTree = "<group>"; };
 		AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,8 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD3BD311C6E68EE00846C9E /* RealmSwift.framework in Frameworks */,
-				AFD3BD2F1C6E68EE00846C9E /* Realm.framework in Frameworks */,
+				AFD3BD3A1C6E89D800846C9E /* Realm.framework in Frameworks */,
+				AFD3BD3B1C6E89D800846C9E /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,20 +93,11 @@
 			path = CloudStickies;
 			sourceTree = "<group>";
 		};
-		AFD3BD281C6E684C00846C9E /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				AFD3BD291C6E684C00846C9E /* Realm.framework */,
-				AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */,
-			);
-			name = Realm;
-			path = "swift-2.1.1";
-			sourceTree = "<group>";
-		};
 		AFD3BD2B1C6E687100846C9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFD3BD281C6E684C00846C9E /* Realm */,
+				AFD3BD381C6E89D800846C9E /* Realm.framework */,
+				AFD3BD391C6E89D800846C9E /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,6 +292,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/swift-2.1.1",
+					"$(PROJECT_DIR)/Realm",
 				);
 				INFOPLIST_FILE = CloudStickies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -321,6 +309,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/swift-2.1.1",
+					"$(PROJECT_DIR)/Realm",
 				);
 				INFOPLIST_FILE = CloudStickies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
