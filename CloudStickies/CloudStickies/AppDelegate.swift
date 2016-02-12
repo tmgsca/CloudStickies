@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import RealmSwift
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -24,6 +25,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupMenuBarIcon()
         
         setupButtonMenu()
+        
+        openSavedNotes()
+        
+        print(Realm.Configuration.defaultConfiguration.path!)
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -52,6 +57,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem?.menu = menu
     }
     
+    private func openSavedNotes() {
+        
+        for note in StickyNote.all() {
+            
+            if let controller = StickyWindowController.note(self.stickyControllers.last, id: note.id) {
+                
+                self.stickyControllers.append(controller)
+                
+                controller.showWindow(self)
+            }
+        }
+    }
+    
     //MARK: Actions
     
     func newNote() {
@@ -78,7 +96,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         }
-        
+
         controllerToBetTerminated?.close()
     }
 }

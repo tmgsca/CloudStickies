@@ -737,6 +737,9 @@
                             <constraint firstItem="Vxv-9K-WR6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="lRM-Tf-aTU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Jcq-38-mAd" id="EUw-4V-vuP"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-151" y="471"/>

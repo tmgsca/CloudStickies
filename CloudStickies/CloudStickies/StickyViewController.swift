@@ -7,26 +7,92 @@
 //
 
 import Cocoa
+import RealmSwift
 
-class StickyViewController: NSViewController {
-
-    var initialPosition = NSPoint()
-    var editable = true
+class StickyViewController: NSViewController, NSTextViewDelegate {
+    
+    @IBOutlet var textView: StickyTextView!
+    
+    //MARK: Properties
+    
+    private var initialPosition = NSPoint()
+    private var editable = true
+    private var savingTimer: NSTimer?
+    
+    var noteID: Int?
+    var note: StickyNote?
+    
+    
+    //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.textView.delegate = self
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
+    
+    //MARK: Setup
+    
+    func setupNote() {
+        
+        if let id = self.noteID {
             
+            self.note = StickyNote.byId(id)
+            
+            self.textView?.string = self.note?.content
+            
+        } else {
+            
+            self.note = StickyNote()
+            
+            if let lastID = StickyNote.all().sorted("id", ascending: false).first?.id {
+                
+                self.note?.id = lastID + 1
+                
+            } else {
+                
+                self.note?.id = 1
+            }
+            
+            self.noteID = self.note?.id
+            
+            StickyNote.save(self.note!)
         }
     }
+    
+    //MARK: TextView events
+    
+    func textDidChange(notification: NSNotification) {
+        
+        self.savingTimer?.invalidate()
+        
+        if let text = self.textView.textStorage?.string {
+            
+            savingTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "saveNoteToDatabase:", userInfo: ["content":text], repeats: false)
+        }
+    }
+    
+    //MARK: Timers
+    
+    func saveNoteToDatabase(timer: NSTimer) {
+        
+        let text = timer.userInfo?["content"] as? String ?? ""
+        
+        let realm = try! Realm()
+        
+        try! realm.write { () -> Void in
+            
+            self.note?.content = text
+        }
+    }
+    
+    //MARK: Actions
     
     @IBAction func disableWindowEditing(sender: NSButton) {
         self.editable = sender.state == NSOffState
     }
+    
+    //MARK: Drag events
     
     override func mouseDown(theEvent: NSEvent) {
         
@@ -74,6 +140,6 @@ class StickyViewController: NSViewController {
         
         initialPosition.y = -1
     }
-   
+    
 }
 

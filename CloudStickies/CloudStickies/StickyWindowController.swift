@@ -9,14 +9,16 @@
 import Cocoa
 
 class StickyWindowController: NSWindowController {
-
-    class func note(lastWindowController: StickyWindowController?) -> StickyWindowController? {
+    
+    var noteID: Int?
+    
+    class func note(lastWindowController: StickyWindowController?, id: Int?) -> StickyWindowController? {
         
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         
-        let id = "StickyWindowController"
+        let controllerId = "StickyWindowController"
         
-        if let controller = storyboard.instantiateControllerWithIdentifier(id) as? StickyWindowController {
+        if let controller = storyboard.instantiateControllerWithIdentifier(controllerId) as? StickyWindowController {
             
             if let lastWindow = lastWindowController?.window {
                 
@@ -40,16 +42,55 @@ class StickyWindowController: NSWindowController {
                     
                     controller.window?.setFrameOrigin(NSPoint(x: 20, y: y))
                 }
-
+                
             }
-        
+            
+            if let id = id {
+                
+                if let _ = StickyNote.byId(id) {
+                    
+                    controller.noteID = id
+                }
+            }
+            
+            controller.setupNote()
+            
             return controller
         }
         
         return nil
     }
     
+    class func note(lastWindowController: StickyWindowController?) -> StickyWindowController? {
+        
+       return note(lastWindowController, id: nil)
+    }
+    
+    override func close() {
+        
+        if let contentController = self.window?.contentViewController as? StickyViewController {
+            
+            if let id = contentController.note?.id, note = StickyNote.byId(id) {
+                
+                StickyNote.delete(note)
+            }
+        }
+        
+        super.close()
+    }
+    
     override func windowDidLoad() {
         super.windowDidLoad()
+        
+    }
+    
+    func setupNote() {
+    
+        if let viewController = self.window?.contentViewController as? StickyViewController {
+            
+            viewController.noteID = self.noteID
+            
+            viewController.setupNote()
+        }
     }
 }

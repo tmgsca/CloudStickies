@@ -13,8 +13,28 @@
 		AF8698431C6901EB009C1EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8698411C6901EB009C1EB1 /* Main.storyboard */; };
 		AFD1913A1C6D522D00BC5E27 /* StickyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD191391C6D522D00BC5E27 /* StickyWindow.swift */; };
 		AFD1913C1C6D6A4100BC5E27 /* StickyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */; };
+		AFD3BD2E1C6E689500846C9E /* StickyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3BD2D1C6E689500846C9E /* StickyNote.swift */; };
+		AFD3BD2F1C6E68EE00846C9E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD291C6E684C00846C9E /* Realm.framework */; };
+		AFD3BD301C6E68EE00846C9E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD291C6E684C00846C9E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFD3BD311C6E68EE00846C9E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */; };
+		AFD3BD321C6E68EE00846C9E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFE715FB1C6A8F810016D445 /* StickyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AFD3BD331C6E68EF00846C9E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AFD3BD321C6E68EE00846C9E /* RealmSwift.framework in Embed Frameworks */,
+				AFD3BD301C6E68EE00846C9E /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF8698381C6901EB009C1EB1 /* CloudStickies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudStickies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +45,9 @@
 		AF8698441C6901EB009C1EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD191391C6D522D00BC5E27 /* StickyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindow.swift; sourceTree = "<group>"; };
 		AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyTextView.swift; sourceTree = "<group>"; };
+		AFD3BD291C6E684C00846C9E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		AFD3BD2D1C6E689500846C9E /* StickyNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyNote.swift; sourceTree = "<group>"; };
 		AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD3BD311C6E68EE00846C9E /* RealmSwift.framework in Frameworks */,
+				AFD3BD2F1C6E68EE00846C9E /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				AF86983A1C6901EB009C1EB1 /* CloudStickies */,
+				AFD3BD2B1C6E687100846C9E /* Frameworks */,
 				AF8698391C6901EB009C1EB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +84,7 @@
 		AF86983A1C6901EB009C1EB1 /* CloudStickies */ = {
 			isa = PBXGroup;
 			children = (
+				AFD3BD2C1C6E688C00846C9E /* Model */,
 				AF86983B1C6901EB009C1EB1 /* AppDelegate.swift */,
 				AF86983D1C6901EB009C1EB1 /* StickyViewController.swift */,
 				AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */,
@@ -70,6 +97,32 @@
 			path = CloudStickies;
 			sourceTree = "<group>";
 		};
+		AFD3BD281C6E684C00846C9E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3BD291C6E684C00846C9E /* Realm.framework */,
+				AFD3BD2A1C6E684C00846C9E /* RealmSwift.framework */,
+			);
+			name = Realm;
+			path = "swift-2.1.1";
+			sourceTree = "<group>";
+		};
+		AFD3BD2B1C6E687100846C9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3BD281C6E684C00846C9E /* Realm */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFD3BD2C1C6E688C00846C9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3BD2D1C6E689500846C9E /* StickyNote.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,6 +133,7 @@
 				AF8698341C6901EB009C1EB1 /* Sources */,
 				AF8698351C6901EB009C1EB1 /* Frameworks */,
 				AF8698361C6901EB009C1EB1 /* Resources */,
+				AFD3BD331C6E68EF00846C9E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +196,7 @@
 			files = (
 				AFD1913A1C6D522D00BC5E27 /* StickyWindow.swift in Sources */,
 				AF86983E1C6901EB009C1EB1 /* StickyViewController.swift in Sources */,
+				AFD3BD2E1C6E689500846C9E /* StickyNote.swift in Sources */,
 				AFE715FB1C6A8F810016D445 /* StickyWindowController.swift in Sources */,
 				AFD1913C1C6D6A4100BC5E27 /* StickyTextView.swift in Sources */,
 				AF86983C1C6901EB009C1EB1 /* AppDelegate.swift in Sources */,
@@ -247,6 +302,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-2.1.1",
+				);
 				INFOPLIST_FILE = CloudStickies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.emisvx.cloudstickies;
@@ -259,6 +318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-2.1.1",
+				);
 				INFOPLIST_FILE = CloudStickies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.emisvx.cloudstickies;
