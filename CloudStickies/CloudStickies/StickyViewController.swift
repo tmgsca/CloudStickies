@@ -13,6 +13,8 @@ class StickyViewController: NSViewController, NSTextViewDelegate {
     
     @IBOutlet var textView: StickyTextView!
     
+    @IBOutlet weak var separatorHeightConstraint: NSLayoutConstraint!
+    
     //MARK: Properties
     
     private var initialPosition = NSPoint()
@@ -27,6 +29,8 @@ class StickyViewController: NSViewController, NSTextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        separatorHeightConstraint.constant = 1.0 / (NSScreen.mainScreen()?.backingScaleFactor)!
         
         self.textView.delegate = self
     }
