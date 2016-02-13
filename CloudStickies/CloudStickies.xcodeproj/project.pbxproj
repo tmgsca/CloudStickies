@@ -19,6 +19,7 @@
 		AFD3BD411C6E8CBE00846C9E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD391C6E89D800846C9E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFD3BD431C6EB00B00846C9E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3BD421C6EB00B00846C9E /* AppKit.framework */; };
 		AFD3BD471C6EBB0900846C9E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3BD461C6EBB0900846C9E /* DraggableView.swift */; };
+		AFD3BD491C6EE0FC00846C9E /* StickyNoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3BD481C6EE0FC00846C9E /* StickyNoteButton.swift */; };
 		AFE715FB1C6A8F810016D445 /* StickyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		AFD3BD3E1C6E8C1E00846C9E /* StickyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyView.swift; sourceTree = "<group>"; };
 		AFD3BD421C6EB00B00846C9E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AFD3BD461C6EBB0900846C9E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		AFD3BD481C6EE0FC00846C9E /* StickyNoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyNoteButton.swift; sourceTree = "<group>"; };
 		AFE715FA1C6A8F810016D445 /* StickyWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,8 +132,9 @@
 				AFD191391C6D522D00BC5E27 /* StickyWindow.swift */,
 				AFD3BD3E1C6E8C1E00846C9E /* StickyView.swift */,
 				AFD1913B1C6D6A4100BC5E27 /* StickyTextView.swift */,
-				AF8698411C6901EB009C1EB1 /* Main.storyboard */,
 				AFD3BD461C6EBB0900846C9E /* DraggableView.swift */,
+				AF8698411C6901EB009C1EB1 /* Main.storyboard */,
+				AFD3BD481C6EE0FC00846C9E /* StickyNoteButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				AFD3BD3F1C6E8C1E00846C9E /* StickyView.swift in Sources */,
 				AFD1913C1C6D6A4100BC5E27 /* StickyTextView.swift in Sources */,
 				AF86983C1C6901EB009C1EB1 /* AppDelegate.swift in Sources */,
+				AFD3BD491C6EE0FC00846C9E /* StickyNoteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

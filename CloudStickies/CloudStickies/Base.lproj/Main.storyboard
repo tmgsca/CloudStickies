@@ -1507,12 +1507,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ruA-HA-QMA">
-                                <rect key="frame" x="332" y="132" width="16" height="16"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="SFJ-oF-02J" userLabel="Draggable View" customClass="DraggableView" customModule="CloudStickies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="130" width="319" height="20"/>
+                            </customView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ruA-HA-QMA" customClass="StickyNoteButton" customModule="CloudStickies" customModuleProvider="target">
+                                <rect key="frame" x="319" y="134" width="12" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ruA-HA-QMA" secondAttribute="height" multiplier="1:1" id="bjF-Se-eVe"/>
                                 </constraints>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="right" inset="2" id="Gkd-Ar-95X">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Lock" imagePosition="only" inset="2" id="Gkd-Ar-95X">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1520,9 +1523,16 @@
                                     <action selector="disableWindowEditing:" target="XfG-lQ-9wD" id="dwy-FJ-NQz"/>
                                 </connections>
                             </button>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="SFJ-oF-02J" userLabel="Draggable View" customClass="DraggableView" customModule="CloudStickies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="334" height="20"/>
-                            </customView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="rC0-aw-Ycw" userLabel="Config Button">
+                                <rect key="frame" x="334" y="134" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rC0-aw-Ycw" secondAttribute="height" multiplier="1:1" id="NnI-L8-ldu"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Config" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="TTg-14-A3J">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Vxv-9K-WR6" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="4Ca-yy-wiD"/>
@@ -1530,7 +1540,9 @@
                             <constraint firstAttribute="bottom" secondItem="qSh-zC-Qp4" secondAttribute="bottom" id="6Zw-h0-6lC"/>
                             <constraint firstAttribute="trailing" secondItem="qSh-zC-Qp4" secondAttribute="trailing" id="6uH-kB-r3Y"/>
                             <constraint firstAttribute="bottom" secondItem="Kmx-b2-f9x" secondAttribute="bottom" id="7cl-mE-VWp"/>
-                            <constraint firstAttribute="trailing" secondItem="ruA-HA-QMA" secondAttribute="trailing" constant="4" id="D22-lk-RlD"/>
+                            <constraint firstItem="ruA-HA-QMA" firstAttribute="leading" secondItem="SFJ-oF-02J" secondAttribute="trailing" id="8rf-Lf-7rF"/>
+                            <constraint firstItem="Vxv-9K-WR6" firstAttribute="top" secondItem="rC0-aw-Ycw" secondAttribute="bottom" constant="4" id="9a2-GV-moJ"/>
+                            <constraint firstItem="rC0-aw-Ycw" firstAttribute="leading" secondItem="ruA-HA-QMA" secondAttribute="trailing" constant="3" id="9r3-MH-q5d"/>
                             <constraint firstItem="SFJ-oF-02J" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ERL-cH-UJL"/>
                             <constraint firstItem="ruA-HA-QMA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="GYu-nz-med"/>
                             <constraint firstAttribute="trailing" secondItem="Vxv-9K-WR6" secondAttribute="trailing" id="HgK-kz-5Il"/>
@@ -1538,13 +1550,14 @@
                             <constraint firstItem="qSh-zC-Qp4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Oun-Zm-18L"/>
                             <constraint firstAttribute="trailing" secondItem="Ycz-hy-F7S" secondAttribute="trailing" id="RJN-s8-3PQ"/>
                             <constraint firstItem="SFJ-oF-02J" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="UwJ-Wz-ffE"/>
+                            <constraint firstItem="rC0-aw-Ycw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="4" id="c1S-7f-2hd"/>
                             <constraint firstItem="Vxv-9K-WR6" firstAttribute="top" secondItem="ruA-HA-QMA" secondAttribute="bottom" constant="4" id="d8Z-Be-WKQ"/>
                             <constraint firstItem="Ycz-hy-F7S" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="dJU-sB-IEz"/>
                             <constraint firstItem="Vxv-9K-WR6" firstAttribute="top" secondItem="Ycz-hy-F7S" secondAttribute="bottom" id="dsM-KP-gjR"/>
                             <constraint firstAttribute="trailing" secondItem="Kmx-b2-f9x" secondAttribute="trailing" id="eUi-Jc-e2J"/>
+                            <constraint firstAttribute="trailing" secondItem="rC0-aw-Ycw" secondAttribute="trailing" constant="4" id="hri-y7-6fQ"/>
                             <constraint firstItem="Ycz-hy-F7S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="kA4-1i-MY1"/>
                             <constraint firstItem="Vxv-9K-WR6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="lRM-Tf-aTU"/>
-                            <constraint firstItem="ruA-HA-QMA" firstAttribute="leading" secondItem="SFJ-oF-02J" secondAttribute="trailing" id="nsr-ju-mg3"/>
                             <constraint firstItem="Vxv-9K-WR6" firstAttribute="top" secondItem="SFJ-oF-02J" secondAttribute="bottom" id="w5I-Xw-J66"/>
                             <constraint firstItem="qSh-zC-Qp4" firstAttribute="top" secondItem="Vxv-9K-WR6" secondAttribute="bottom" id="zqt-ei-7Me"/>
                         </constraints>
@@ -1558,4 +1571,8 @@
             <point key="canvasLocation" x="-151" y="471"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Config" width="12" height="12"/>
+        <image name="Lock" width="12" height="12"/>
+    </resources>
 </document>
